@@ -1,2 +1,15 @@
-# Voice-Recognition-python
-Voice Recognition Using Matplotlib
+The ultimate goal of AVR research is to allow a computer to recognize in real‐time, with 100% accuracy, all words that are intelligibly spoken by any person, independent of vocabulary size, noise, speaker characteristics or accent.  Today, if the system is trained to learn an individual speaker's voice, then much larger vocabularies are possible and accuracy can be greater than 90%. Commercially available AVR systems usually require only a short period of speaker training and may successfully capture continuous speech with a large vocabulary at normal pace with a very high accuracy. Most commercial companies claim that recognition software can achieve between 98% to 99% accuracy if operated under optimal conditions. `Optimal conditions' usually assume that users:  have speech characteristics which match the training data, can achieve proper speaker adaptation, and work in a clean noise environment (e.g. quiet space). This explains why some users, especially those whose speech is heavily accented, might achieve recognition rates much lower than expected.  
+
+Practically in the API’s that we are using herein it is Important to have some fray for the Error margins as well as The Pyaudio with its limited functionality at the core of the analyzer, can only put forth a speech recognizer which takes into consideration the noise that are expected to creep in when the user speaks his password during registration or login to the database.
+Implementing such an analyzer at the platform proved to be a task tedious and running it at the socket of the client server using the processing capabilities of both the systems was another big task to have implemented.
+
+How Does AVR Work?
+ The goal of an AVR system is to accurately and efficiently convert a speech signal into a text message transcription of the spoken words independent of the speaker, environment or the device used to record the speech (i.e. the microphone). This process begins when a speaker decides what to say and actually speaks a sentence.  (This is a sequence of words possibly with pauses and noises.)  The software then produces a speech wave form, which embodies the words of the sentence as well as the extraneous sounds and pauses in the spoken input.  Next, the software attempts to decode the speech into the best estimate of the sentence. First it converts the speech signal into a sequence of vectors which are measured throughout the duration of the speech signal. Then, using a syntactic decoder it generates a valid sequence of representations which are mapped onto the analyzer using various transforms and then mapped into chunks at the Excel spreadsheet hence made which will later be used to match the voice data when the user will try to login into the database.
+
+Main Python Libraries Used:
+•	Pyaudio
+•	numpy.fft for analyzing the wave using fourier transforms inbuilt.
+•	tkinter
+•	matlibplot to study the plots and the details of the sound files in the csv format for comparison.
+•	Speech_recognition- extract the audio from the file using the intermediate binary converter and back and forth.
+•	Canvas- to check the 2D mapping of the audio in the spectrum analyzer.
